@@ -579,3 +579,31 @@ h3 {
     order: 0;
   }
 }
+
+/* ---------- Mac and Windows downloads ---------- */
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.button--ghost {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.button--ghost:hover {
+  box-shadow: 0 10px 24px rgb(24 33 43 / 12%);
+}
+
+.steps__os {
+  margin: 28px 0 14px;
+  font-size: 20px;
+}
+
+.steps__os:first-of-type {
+  margin-top: 0;
+}

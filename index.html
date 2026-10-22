@@ -6,12 +6,12 @@
     <title>SoCubes · Your research desk, side by side</title>
     <meta
       name="description"
-      content="SoCubes puts your PDFs, websites, notes and Claude side by side on your Mac. Mark up papers, write with citations, plan your deadlines. Free while in beta."
+      content="SoCubes puts your PDFs, websites, notes and Claude side by side on your Mac or PC. Mark up papers, write with citations, plan your deadlines. Free while in beta."
     />
     <meta property="og:title" content="SoCubes · Your research desk, side by side" />
     <meta
       property="og:description"
-      content="PDFs, websites, notes and Claude side by side on your Mac. Free while in beta."
+      content="PDFs, websites, notes and Claude side by side on your Mac or PC. Free while in beta."
     />
     <meta property="og:image" content="https://socubes.space/images/workspace.png" />
     <meta property="og:url" content="https://socubes.space/" />
@@ -43,31 +43,26 @@
 
     <main>
       <section class="hero">
-        <p class="pill">Free public beta · for Mac</p>
+        <p class="pill">Free public beta · Mac and Windows</p>
         <h1>Your research desk,<br /><em>side by side.</em></h1>
         <p class="hero__lead">
           SoCubes puts your PDFs, websites, notes and Claude next to each other on one screen. Mark up
           the paper you’re reading, write with real citations, and keep every deadline in view.
         </p>
         <div class="hero__actions" id="download">
-          <a
-            class="button button--big"
-            href="/download"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 4v11M7 10l5 5 5-5M5 20h14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            Download for Mac
-          </a>
+          <div class="hero__buttons">
+            <a class="button button--big" href="/download">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.1 5.8c.6-.8 1.1-1.9.9-3-1 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1.1.1 2.2-.5 2.9-1.3z" fill="currentColor"/></svg>
+              Download for Mac
+            </a>
+            <a class="button button--big button--ghost" href="/download/windows">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM11.5 4.3L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z" fill="currentColor"/></svg>
+              Download for Windows
+            </a>
+          </div>
           <p class="hero__small">
-            macOS 14 Sonoma or later · Apple chip and Intel · Free during the beta
+            Mac: macOS 14 Sonoma or later, Apple chip or Intel · Windows: 10 or 11, 64-bit (new)
+            · Free during the beta
           </p>
         </div>
         <figure class="shot shot--hero">
@@ -133,30 +128,27 @@
         <div class="split__text">
           <h3>Your desk follows you</h3>
           <p>
-            Sign in on your other Macs and your projects, PDFs, marks and notes are there, backed up
+            Sign in on your other computers, Mac or Windows, and your projects, PDFs, marks and notes are there, backed up
             to your account. It all works offline too, and catches up when you’re back.
           </p>
           <h3>Private where it matters</h3>
           <p>
             Lock a project with Touch ID, a passcode or an authenticator app. Claude chats,
-            browsing history and website logins never leave your Mac.
+            browsing history and website logins never leave your computer.
           </p>
         </div>
       </section>
 
       <section class="install" id="install">
         <h2>How to install</h2>
+        <h3 class="steps__os">On a Mac</h3>
         <ol class="steps">
           <li>
             <h3>Download</h3>
             <p>
-              Click <a href="#download">Download for Mac</a> and open <b>SoCubes.dmg</b> from your
-              Downloads.
+              Click <a href="/download">Download for Mac</a> and open <b>SoCubes.dmg</b> from your
+              Downloads, then drag SoCubes onto the Applications folder.
             </p>
-          </li>
-          <li>
-            <h3>Drag to Applications</h3>
-            <p>Drag the SoCubes icon onto the Applications folder in the window that opens.</p>
           </li>
           <li>
             <h3>Open it the first time</h3>
@@ -172,6 +164,31 @@
             <p>
               Sign up with your email. We send a code to confirm it, and you’re in. Your first
               project is one name away.
+            </p>
+          </li>
+        </ol>
+        <h3 class="steps__os">On Windows</h3>
+        <ol class="steps">
+          <li>
+            <h3>Download</h3>
+            <p>
+              Click <a href="/download/windows">Download for Windows</a> and open
+              <b>SoCubes-Setup.exe</b> from your Downloads.
+            </p>
+          </li>
+          <li>
+            <h3>Run it the first time</h3>
+            <p>
+              During the beta, Windows may say “Windows protected your PC”. Click
+              <b>More info</b>, then <b>Run anyway</b>. SoCubes installs itself and opens; you’ll
+              find it in the Start menu.
+            </p>
+          </li>
+          <li>
+            <h3>Make your account</h3>
+            <p>
+              Sign up with your email, or log in with the account you use on your Mac: your
+              projects appear on both.
             </p>
           </li>
         </ol>
@@ -194,21 +211,30 @@
         <details>
           <summary>How does Claude work in SoCubes?</summary>
           <p>
-            You add your own key from Anthropic in Settings. It’s kept in your Mac’s Keychain, and
-            your questions go from your Mac straight to Anthropic. You can also sign in to ChatGPT,
+            You add your own key from Anthropic in Settings. It’s locked in your computer’s own secure storage, and
+            your questions go from your computer straight to Anthropic. You can also sign in to ChatGPT,
             Gemini, Perplexity, Grok or Copilot right inside a pane.
           </p>
         </details>
         <details>
           <summary>Where are my files kept?</summary>
           <p>
-            On your Mac first, and backed up to your SoCubes account so they appear on your other
-            Macs. Only you can see them. Read the <a href="privacy.html">privacy page</a> for the
+            On your computer first, and backed up to your SoCubes account so they appear on your
+            other computers. Only you can see them. Read the <a href="privacy.html">privacy page</a> for the
             details.
           </p>
         </details>
         <details>
-          <summary>Will there be Windows, iPad or a web version?</summary>
+          <summary>Does SoCubes work on Windows?</summary>
+          <p>
+            Yes, as a new beta for Windows 10 and 11. It’s the same app with the same account, so a
+            project made on your Mac opens on your PC. A few Mac extras aren’t on Windows yet: the
+            desktop widget, Touch ID, and writing out voice notes as words (the recordings still
+            save and play).
+          </p>
+        </details>
+        <details>
+          <summary>Will there be an iPad or a web version?</summary>
           <p>Yes, they’re on the way, with the same account, so your desk follows you there too.</p>
         </details>
         <details>
