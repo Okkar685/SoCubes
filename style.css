@@ -422,3 +422,34 @@ h3 {
   text-align: center;
   padding-top: 96px;
 }
+
+/* ---------- Credits ---------- */
+
+.credits {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  columns: 2 280px;
+  column-gap: 32px;
+  font-size: 14px;
+}
+
+.credits li {
+  break-inside: avoid;
+  padding: 4px 0;
+}
+
+.credits span {
+  color: var(--muted);
+}
+
+/* ---------- Terms and privacy ---------- */
+
+.legal h2 {
+  font-size: 19px;
+}
+
+.legal p,
+.legal li {
+  line-height: 1.65;
+}
