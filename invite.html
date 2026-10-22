@@ -54,6 +54,12 @@
         document.getElementById('next').value = next
       }
       if (params.has('wrong')) document.getElementById('wrong').hidden = false
+      // A link with the code in it (from an invite pass) fills it in and goes straight in.
+      const given = (params.get('code') || '').replace(/\D/g, '')
+      if (given.length === 6 && !params.has('wrong')) {
+        document.getElementById('code').value = given
+        document.getElementById('code').form.requestSubmit()
+      }
       // Digits only, and it sends itself once all six are typed.
       const box = document.getElementById('code')
       box.addEventListener('input', () => {
