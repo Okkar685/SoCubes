@@ -453,3 +453,129 @@ h3 {
 .legal li {
   line-height: 1.65;
 }
+
+/* ---------- Showcase (home) and the Features page ---------- */
+
+.showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.showcase__text h2 {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.showcase__text > p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ticks {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.ticks li {
+  position: relative;
+  padding: 5px 0 5px 28px;
+}
+
+.ticks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 16%, transparent)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12l4 4 8-8' fill='none' stroke='%232f6fe4' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / 11px no-repeat;
+}
+
+.split--reverse {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0 0;
+}
+
+.feature:nth-of-type(even) .shot {
+  order: 2;
+}
+
+.feature__text h2 {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.feature__text > p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.feature__text .ticks {
+  margin-bottom: 0;
+}
+
+.page-hero {
+  padding: 48px 0 8px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+}
+
+.more {
+  padding-top: 80px;
+}
+
+.cta {
+  margin-top: 80px;
+  padding: 48px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .showcase,
+  .feature,
+  .split--reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .feature:nth-of-type(even) .shot {
+    order: 0;
+  }
+}
