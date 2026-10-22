@@ -7,6 +7,8 @@
   --accent: #2f6fe4;
   --accent-ink: #ffffff;
   --shadow: 0 30px 80px rgb(24 33 43 / 16%);
+  --bar: rgb(238 241 244 / 88%);
+  --bar-line: rgb(24 33 43 / 8%);
   color-scheme: light dark;
 }
 
@@ -19,6 +21,8 @@
     --line: #2c343d;
     --accent: #5b93f5;
     --shadow: 0 30px 80px rgb(0 0 0 / 50%);
+    --bar: rgb(18 22 27 / 88%);
+    --bar-line: rgb(255 255 255 / 8%);
   }
 }
 
@@ -28,10 +32,13 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(1200px 600px at 85% -10%, color-mix(in srgb, #8a5cf6 14%, transparent), transparent 70%),
     radial-gradient(900px 500px at 0% 10%, color-mix(in srgb, #2f7cf6 12%, transparent), transparent 70%),
@@ -60,10 +67,13 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  backdrop-filter: blur(16px);
+  /* Full width, with the content lined up with the page below. */
+  padding: 12px max(20px, calc((100% - 1120px) / 2));
+  /* A solid-enough bar, so pictures never show through the words. */
+  background: var(--bar);
+  border-bottom: 1px solid var(--bar-line);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
 }
 
 .brand {
@@ -336,8 +346,88 @@ h3 {
 }
 
 @media (max-width: 760px) {
-  .top__nav a:not(.button) {
+  .top__nav {
+    gap: 14px;
+  }
+
+  /* On a phone the bar keeps Features and Download; the rest is further down the page. */
+  .top__nav a:not(.button):not([href$='features.html']) {
     display: none;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero__lead {
+    font-size: 17px;
+  }
+
+  /* Every big button on a phone: full width, the same size, words centred. */
+  .hero__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .button--big {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 17px;
+  }
+
+  .showcase__text,
+  .feature__text {
+    text-align: left;
+  }
+
+  .contact .button {
+    align-self: stretch;
+  }
+
+  .top .button--small {
+    padding: 7px 14px;
+  }
+
+  .steps li,
+  .card {
+    padding: 20px;
+  }
+
+  .foot {
+    gap: 8px 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .shot {
+    border-radius: 12px;
+  }
+
+  .showcase__text h2,
+  .feature__text h2 {
+    font-size: 28px;
+  }
+
+  section {
+    padding-top: 56px;
+  }
+
+  .feature {
+    padding-top: 48px;
+  }
+
+  .contact {
+    padding: 18px;
   }
 
   .split {
