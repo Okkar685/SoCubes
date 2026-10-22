@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · SoCubes</title>
+    <meta name="description" content="Send the SoCubes team a question, an idea or a problem." />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="" width="30" height="30" />
+        SoCubes
+      </a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#questions">Questions</a>
+        <a class="button button--small" href="index.html#download">Download</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h1>Say hello</h1>
+      <p>
+        A question, an idea, or something that isn’t working? Write to us here and we’ll reply by
+        email, usually within a day or two.
+      </p>
+
+      <form
+        class="contact"
+        name="contact"
+        method="POST"
+        action="/thanks.html"
+        data-netlify="true"
+        netlify-honeypot="company"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="contact__trap" aria-hidden="true">
+          <label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label>
+        </p>
+        <div class="contact__row">
+          <label class="contact__field">
+            <span>Your name</span>
+            <input name="name" autocomplete="name" required maxlength="100" />
+          </label>
+          <label class="contact__field">
+            <span>Your email</span>
+            <input name="email" type="email" autocomplete="email" required maxlength="200" />
+          </label>
+        </div>
+        <label class="contact__field">
+          <span>What’s it about?</span>
+          <select name="topic">
+            <option>A question</option>
+            <option>Something isn’t working</option>
+            <option>An idea for SoCubes</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="contact__field">
+          <span>Your message</span>
+          <textarea
+            name="message"
+            rows="7"
+            required
+            maxlength="5000"
+            placeholder="If something isn’t working, say what you did and what happened."
+          ></textarea>
+        </label>
+        <button class="button button--big" type="submit">Send message</button>
+        <p class="contact__small">
+          We only use your email to reply. See our <a href="privacy.html">privacy page</a>.
+        </p>
+      </form>
+    </main>
+
+    <footer class="foot">
+      <span>© 2026 SoCubes</span>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </footer>
+  </body>
+</html>

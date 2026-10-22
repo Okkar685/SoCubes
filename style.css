@@ -348,3 +348,77 @@ h3 {
     padding-top: 32px;
   }
 }
+
+/* ---------- Contact ---------- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-color: var(--accent);
+}
+
+.contact .button {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.contact__small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact__trap {
+  position: absolute;
+  left: -10000px;
+}
+
+.page--center {
+  text-align: center;
+  padding-top: 96px;
+}
