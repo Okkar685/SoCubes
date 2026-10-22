@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SoCubes · Your research desk, side by side</title>
+    <meta
+      name="description"
+      content="SoCubes puts your PDFs, websites, notes and Claude side by side on your Mac. Mark up papers, write with citations, plan your deadlines. Free while in beta."
+    />
+    <meta property="og:title" content="SoCubes · Your research desk, side by side" />
+    <meta
+      property="og:description"
+      content="PDFs, websites, notes and Claude side by side on your Mac. Free while in beta."
+    />
+    <meta property="og:image" content="https://socubes.space/images/workspace.png" />
+    <meta property="og:url" content="https://socubes.space/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="apple-touch-icon" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="#">
+        <img src="images/icon.png" alt="" width="30" height="30" />
+        SoCubes
+      </a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="#features">Features</a>
+        <a href="#install">How to install</a>
+        <a href="#questions">Questions</a>
+        <a class="button button--small" href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="pill">Free public beta · for Mac</p>
+        <h1>Your research desk,<br /><em>side by side.</em></h1>
+        <p class="hero__lead">
+          SoCubes puts your PDFs, websites, notes and Claude next to each other on one screen. Mark up
+          the paper you’re reading, write with real citations, and keep every deadline in view.
+        </p>
+        <div class="hero__actions" id="download">
+          <a
+            class="button button--big"
+            href="https://github.com/Okkar685/socubes/releases/latest/download/SoCubes.dmg"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 4v11M7 10l5 5 5-5M5 20h14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Download for Mac
+          </a>
+          <p class="hero__small">
+            macOS 14 Sonoma or later · Apple chip and Intel · Free during the beta
+          </p>
+        </div>
+        <figure class="shot shot--hero">
+          <img
+            src="images/workspace.png"
+            alt="SoCubes with a research paper on the left and a chapter being written on the right"
+            width="1600"
+            height="1000"
+          />
+        </figure>
+      </section>
+
+      <section class="features" id="features">
+        <h2>Everything for one piece of research, on one screen</h2>
+        <div class="grid">
+          <article class="card">
+            <span class="card__dot" style="--dot: #e5673a"></span>
+            <h3>Up to ten panes</h3>
+            <p>
+              Split the screen into PDFs, websites, documents and AI chats. Drag to resize or swap.
+              Reopen a project and everything is exactly where you left it.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot: #e5673a"></span>
+            <h3>Mark up PDFs</h3>
+            <p>
+              Pen, highlighter, shapes, sticky comments and voice notes, with words written out for
+              you. Download the PDF with your marks in it.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot: #24a37d"></span>
+            <h3>Write with citations</h3>
+            <p>
+              A proper writer with styles, comments and page layout. Type @ to cite a paper; the
+              bibliography builds itself in APA, MLA or Chicago. Export to Word.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot: #8a5cf6"></span>
+            <h3>Ask Claude about your library</h3>
+            <p>
+              Claude reads the PDFs in your project and answers with the page it found it on. Check
+              the claims in your draft against your sources. Uses your own Anthropic key.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot: #d9a400"></span>
+            <h3>Plan it</h3>
+            <p>
+              Tasks with dates and checklists, a calendar and a reading list. Mention a paper, a
+              highlight or an idea card right in a task. See this week across every project.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot: #2f7cf6"></span>
+            <h3>A library that finds things</h3>
+            <p>
+              Every file in one place, with folders, tags and a reading list. ⌘K searches every
+              PDF, note, comment and voice note. Save any web page as a PDF to cite.
+            </p>
+          </article>
+        </div>
+
+        <div class="split">
+          <figure class="shot">
+            <img
+              src="images/plan.png"
+              alt="The plan: tasks due today, this week and later"
+              width="1600"
+              height="1000"
+              loading="lazy"
+            />
+          </figure>
+          <div class="split__text">
+            <h3>Your desk follows you</h3>
+            <p>
+              Sign in on your other Macs and your projects, PDFs, marks and notes are there, backed
+              up to your account. It all works offline too, and catches up when you’re back.
+            </p>
+            <h3>Private where it matters</h3>
+            <p>
+              Lock a project with Touch ID, a passcode or an authenticator app. Claude chats,
+              browsing history and website logins never leave your Mac.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="install" id="install">
+        <h2>How to install</h2>
+        <ol class="steps">
+          <li>
+            <h3>Download</h3>
+            <p>
+              Click <a href="#download">Download for Mac</a> and open <b>SoCubes.dmg</b> from your
+              Downloads.
+            </p>
+          </li>
+          <li>
+            <h3>Drag to Applications</h3>
+            <p>Drag the SoCubes icon onto the Applications folder in the window that opens.</p>
+          </li>
+          <li>
+            <h3>Open it the first time</h3>
+            <p>
+              During the beta, SoCubes isn’t verified by Apple yet, so the first time macOS says it
+              can’t check it. Click <b>Done</b>, then open
+              <b>System Settings › Privacy &amp; Security</b>, scroll down and click
+              <b>Open Anyway</b> next to SoCubes. You only do this once.
+            </p>
+          </li>
+          <li>
+            <h3>Make your account</h3>
+            <p>
+              Sign up with your email. We send a code to confirm it, and you’re in. Your first
+              project is one name away.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="faq" id="questions">
+        <h2>Questions</h2>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes, completely free while SoCubes is in beta.</p>
+        </details>
+        <details>
+          <summary>Why does macOS warn me when I open it?</summary>
+          <p>
+            Apple checks apps that aren’t from the App Store. SoCubes is going through that check
+            now; until it’s done, macOS asks you to confirm once (step 3 above). Updates after that
+            will open without the warning.
+          </p>
+        </details>
+        <details>
+          <summary>How does Claude work in SoCubes?</summary>
+          <p>
+            You add your own key from Anthropic in Settings. It’s kept in your Mac’s Keychain, and
+            your questions go from your Mac straight to Anthropic. You can also sign in to ChatGPT,
+            Gemini, Perplexity, Grok or Copilot right inside a pane.
+          </p>
+        </details>
+        <details>
+          <summary>Where are my files kept?</summary>
+          <p>
+            On your Mac first, and backed up to your SoCubes account so they appear on your other
+            Macs. Only you can see them. Read the <a href="privacy.html">privacy page</a> for the
+            details.
+          </p>
+        </details>
+        <details>
+          <summary>Will there be Windows, iPad or a web version?</summary>
+          <p>Yes, they’re on the way, with the same account, so your desk follows you there too.</p>
+        </details>
+        <details>
+          <summary>How do I get updates?</summary>
+          <p>
+            SoCubes tells you when a new version is out. Click <b>Download</b>, then drag it to
+            Applications again; your projects stay just as they are.
+          </p>
+        </details>
+        <details>
+          <summary>Something isn’t working. Where do I tell you?</summary>
+          <p>
+            Tell us on the
+            <a href="https://github.com/Okkar685/socubes/issues">SoCubes feedback page</a>. Say
+            what you did and what happened, and add a screenshot if you can.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>© 2026 SoCubes</span>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Okkar685/socubes/releases">All versions</a>
+      <a href="https://github.com/Okkar685/socubes/issues">Feedback</a>
+    </footer>
+  </body>
+</html>
