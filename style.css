@@ -697,3 +697,88 @@ h3 {
 .steps__os:first-of-type {
   margin-top: 0;
 }
+
+/* ---------- Invite gate ---------- */
+
+.gate-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 20px;
+}
+
+.gate {
+  width: min(440px, 100%);
+  padding: 40px 32px 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.gate__icon {
+  margin: 0 auto 20px;
+  border-radius: 18px;
+}
+
+.gate h1 {
+  font-size: clamp(30px, 7vw, 38px);
+}
+
+.gate h1 em {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.gate__lead {
+  margin: 14px 0 26px;
+  color: var(--muted);
+}
+
+.gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gate__code {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-indent: 0.5em;
+}
+
+.gate__code:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-color: var(--accent);
+}
+
+.gate__error {
+  margin: 0;
+  color: #c2410c;
+  font-size: 15px;
+}
+
+.gate .button--big {
+  width: 100%;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.gate__small {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome · SoCubes</title>
+    <meta name="description" content="SoCubes is invite-only for now. Enter your invite code." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="gate-page">
+    <main class="gate">
+      <img class="gate__icon" src="images/icon.png" alt="" width="72" height="72" />
+      <h1>Welcome to <em>SoCubes!</em></h1>
+      <p class="gate__lead">
+        You’re one of the very first people to try SoCubes. Type your 6-digit invite code to come
+        in.
+      </p>
+      <form class="gate__form" method="POST" action="/invite">
+        <input type="hidden" name="next" id="next" value="/" />
+        <input
+          class="gate__code"
+          name="code"
+          id="code"
+          aria-label="Invite code"
+          placeholder="••••••"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          pattern="[0-9]{6}"
+          maxlength="6"
+          required
+          autofocus
+        />
+        <p class="gate__error" id="wrong" role="alert" hidden>
+          That code isn’t right. Check your invite and try again.
+        </p>
+        <button class="button button--big" type="submit">Enter</button>
+      </form>
+      <p class="gate__small">
+        Don’t have a code? <a href="contact.html">Ask us for one</a>.
+      </p>
+    </main>
+    <script>
+      const params = new URLSearchParams(location.search)
+      const next = params.get('next')
+      if (next && next.startsWith('/') && !next.startsWith('//')) {
+        document.getElementById('next').value = next
+      }
+      if (params.has('wrong')) document.getElementById('wrong').hidden = false
+      // Digits only, and it sends itself once all six are typed.
+      const box = document.getElementById('code')
+      box.addEventListener('input', () => {
+        box.value = box.value.replace(/\D/g, '').slice(0, 6)
+        if (box.value.length === 6) box.form.requestSubmit()
+      })
+    </script>
+  </body>
+</html>
